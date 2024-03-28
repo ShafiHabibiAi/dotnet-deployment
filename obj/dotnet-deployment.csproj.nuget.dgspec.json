@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/home/tabeed/dotnet-app/dotnet-deployment/web-api.csproj": {}
+    "/home/tabeed/dotnet-app/dotnet-deployment/dotnet-deployment.csproj": {}
   },
   "projects": {
-    "/home/tabeed/dotnet-app/dotnet-deployment/web-api.csproj": {
+    "/home/tabeed/dotnet-app/dotnet-deployment/dotnet-deployment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tabeed/dotnet-app/dotnet-deployment/web-api.csproj",
-        "projectName": "web-api",
-        "projectPath": "/home/tabeed/dotnet-app/dotnet-deployment/web-api.csproj",
+        "projectUniqueName": "/home/tabeed/dotnet-app/dotnet-deployment/dotnet-deployment.csproj",
+        "projectName": "dotnet-deployment",
+        "projectPath": "/home/tabeed/dotnet-app/dotnet-deployment/dotnet-deployment.csproj",
         "packagesPath": "/home/tabeed/.nuget/packages/",
         "outputPath": "/home/tabeed/dotnet-app/dotnet-deployment/obj/",
         "projectStyle": "PackageReference",
