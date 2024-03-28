@@ -22,9 +22,9 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Publish
-      run: dotnet publish -c Release -o ./publish
+      run: dotnet publish -c Release
     - name: zip publish
-      run: zip -r publish.zip  ./publish
+      run: zip -r publish.zip  .
     - name: Configure AWS credentials from Test account
       uses: aws-actions/configure-aws-credentials@v1
       with:
