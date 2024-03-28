@@ -33,4 +33,7 @@ jobs:
         aws-region:  us-east-2
     - name: Upload to S3
       run: |
-          aws s3 cp ./publish s3://dotnet-web-artifacts/ --recursive
+          aws s3 cp publish.zip s3://dotnet-web-artifacts/ --recursive
+    - name: Deploy to EC2 instance
+      run: |
+            aws deploy create-deployment --application-name dotnet-app --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name dotnet-dg --s3-location bucket=dotnet-web-artifacts,key=publish.zip,bundleType=zip
