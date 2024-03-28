@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/ubuntu/.nuget/packages/": {}
+    "/home/tabeed/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ubuntu/web-api/web-api/web-api.csproj",
+      "projectUniqueName": "/home/tabeed/dotnet-app/dotnet-deployment/web-api.csproj",
       "projectName": "web-api",
-      "projectPath": "/home/ubuntu/web-api/web-api/web-api.csproj",
-      "packagesPath": "/home/ubuntu/.nuget/packages/",
-      "outputPath": "/home/ubuntu/web-api/web-api/obj/",
+      "projectPath": "/home/tabeed/dotnet-app/dotnet-deployment/web-api.csproj",
+      "packagesPath": "/home/tabeed/.nuget/packages/",
+      "outputPath": "/home/tabeed/dotnet-app/dotnet-deployment/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ubuntu/.nuget/NuGet/NuGet.Config"
+        "/home/tabeed/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

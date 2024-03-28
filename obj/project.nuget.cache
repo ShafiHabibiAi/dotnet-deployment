@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZEj9eCTiknQn3V9hvG/XMbjEERkpq4qTR2HhUFZFVp9bxtxej1lYNlMOZnZfMhflzyO9RFgmEvWg6C94cpz81A==",
+  "dgSpecHash": "Nl9+LVtfKGMnL1TXbyuHVudyNP+kZEmXguqFHQK/y13DGAYpegx+8kxR2F6Sk3/IPBKsJstfDgXgSLH8fZkUgg==",
   "success": true,
-  "projectFilePath": "/home/ubuntu/web-api/web-api/web-api.csproj",
+  "projectFilePath": "/home/tabeed/dotnet-app/dotnet-deployment/web-api.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
