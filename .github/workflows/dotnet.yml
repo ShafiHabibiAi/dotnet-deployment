@@ -24,54 +24,16 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release
     - name: zip publish
-      run: zip -r publish.zip  . name: .NET
-
-      on:
-        push:
-          branches: [ "main" ]
-        pull_request:
-          branches: [ "main" ]
-      
-      jobs:
-        build:
-      
-          runs-on: ubuntu-latest
-      
-          steps:
-          - uses: actions/checkout@v4
-          - name: Setup .NET
-            uses: actions/setup-dotnet@v4
-            with:
-              dotnet-version: 8.0.x
-          - name: Restore dependencies
-            run: dotnet restore
-          - name: Build
-            run: dotnet build --no-restore
-          - name: Publish
-            run: dotnet publish -c Release
-          - name: zip publish
-            run: zip -r publish.zip  . --exclude .git
-          - name: Configure AWS credentials from Test account
-            uses: aws-actions/configure-aws-credentials@v1
-            with:
-              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              aws-region:  us-east-2
-          - name: list directory
-            run: |
-                  ls -a
-          - name: Upload to S3
-            run: |
-                aws s3 cp publish.zip s3://dotnet-web-artifacts/ --recursive
-          - name: Deploy to EC2 instance
-            run: |
-                  aws deploy create-deployment --application-name dotnet-app --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name dotnet-dg --s3-location bucket=dotnet-web-artifacts,key=publish.zip,bundleType=zip
+      run: zip -r publish.zip  . --exclude .git
     - name: Configure AWS credentials from Test account
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region:  us-east-2
+    - name: list directory 
+      run: |
+            ls -a
     - name: Upload to S3
       run: |
           aws s3 cp publish.zip s3://dotnet-web-artifacts/ --recursive
